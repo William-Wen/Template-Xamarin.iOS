@@ -11,18 +11,26 @@ using UIKit;
 
 namespace Template_Xamarin.iOS
 {
-	[Register ("RootViewController")]
-	partial class RootViewController
+	[Register ("MapViewController")]
+	partial class MapViewController
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UIButton Button_Map { get; set; }
+		UILabel Label_MapCaption { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		MapKit.MKMapView Map_Map { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
-			if (Button_Map != null) {
-				Button_Map.Dispose ();
-				Button_Map = null;
+			if (Label_MapCaption != null) {
+				Label_MapCaption.Dispose ();
+				Label_MapCaption = null;
+			}
+			if (Map_Map != null) {
+				Map_Map.Dispose ();
+				Map_Map = null;
 			}
 		}
 	}
